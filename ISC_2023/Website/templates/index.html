@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Elon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/caelthegreat236/ISC-Website/main/1.elon_musk_spacex.jpg_0-sixteen_nine_0.avif">
+    <br>
+    <form action="elon2" method="post">
+        {% for message in get_flashed_messages() %}
+         {% endfor %}
+        <br>
+        <input type="text" value="Input your name" onfocus="if (this.value == 'Input your name') {this.value=''}" name="name_input">
+        <br>
+        <input type="submit" value="Continue" id="greet">
+    </form>
+</body>
+</html>

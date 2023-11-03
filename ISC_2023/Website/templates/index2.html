@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/caelthegreat236/ISC-Website/main/Screenshot_20231103_142611.ico" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Hello</title>
+</head>
+<body>
+    <img src="https://raw.githubusercontent.com/caelthegreat236/ISC-Website/main/download.jpeg">
+    <br>
+    <form action="elon2" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+    </form>
+        <br>
+    <form method="POST">
+         <input name="text" value="Input a price" onfocus="if (this.value == 'Input a price') {this.value=''}">
+         <input type="submit">
+    </form>
+        <br>
+        <a href="/home">
+        <button>Back</button>
+        </a>
+</body>
+</html>
